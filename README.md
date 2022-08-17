@@ -25,5 +25,10 @@
 *Generating tokens using JWT :*
 
 >>> print(jwt.encode({'user':'bharath' , 'exp':datetime.datetime.utcnow() + datetime.timedelta(seconds=30)} ,'my_secret_key' ))
-eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYmhhcmF0aCIsImV4cCI6MTY2MDY4OTg2OH0.Lc3uKCzAuSaBtyWm2s-xdjAnih5NIoqqpf1cu7AsanM
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYmhhcmF0aCIsImV4cCI6MTY2MDY5ODUzNX0.UrHWYRWZ6D0vFxTwC333uuwDm2QjHDfHxUFEI-_rrVc
 >>> 
+>>> 
+>>> print(jwt.decode("eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYmhhcmF0aCIsImV4cCI6MTY2MDY5ODUzNX0.UrHWYRWZ6D0vFxTwC333uuwDm2QjHDfHxUFEI-_rrVc", "my_secret_key", algorithms=['HS256']))
+{'user': 'bharath', 'exp': 1660698535}
+>>> 
+
