@@ -32,3 +32,12 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYmhhcmF0aCIsImV4cCI6MTY2MDY5ODU
 {'user': 'bharath', 'exp': 1660698535}
 >>> 
 
+
+_First go to http://localhost:5000/ to generate the token
+
+then you can access http://localhost:5000/unprotected without any token.
+
+However to access http://localhost:5000/protected you need to pass a valid token otherwise it will result in 403 error 
+
+
+http://localhost:5000/protected?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiYmhhcmF0aCIsImV4cCI6MTY2MDY5OTM2NX0.18_wTV6sXJoISnovQWr-EQ3wOV61Uzug8unY9e0_-N0
